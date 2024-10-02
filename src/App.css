@@ -1,0 +1,17 @@
+*{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 10px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: antiquewhite;
+}
+.btn{
+    margin-top: 10px;
+}
