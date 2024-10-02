@@ -23,14 +23,14 @@ function WithTrack(WrappedComponent) {
     }
 
     const handleSubmit =(e)=>{
-        e,preventDefault();
+        e.preventDefault();
         console.log('formData:', formData);
     }
     // here we return the component
     return (
     <div >
         <WrappedComponent
-        // formData={formData} we dont use this in the other component so we dont need to pass it.
+        // formData={formData}   we dont use this in the other component so we dont need to pass it.
         handleChange={handleChange}
         handleSubmit={handleSubmit}/>
     </div>
