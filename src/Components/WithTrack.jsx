@@ -10,9 +10,9 @@ function WithTrack(WrappedComponent) {
   return ()=>{
     // here we return the additional functionalities that the original component wants.we give it in the first return.
     const[formData, setFormData] = useState({
-        name: '',
-        contact: '',
-        address: ''
+        name: ''
+        // contact: ''
+        // address: ''
     })
 
     const handleChange = (e)=>{
@@ -30,7 +30,7 @@ function WithTrack(WrappedComponent) {
     return (
     <div >
         <WrappedComponent
-        // formData={formData}   we dont use this in the other component so we dont need to pass it.
+        formData={formData}  
         handleChange={handleChange}
         handleSubmit={handleSubmit}/>
     </div>
