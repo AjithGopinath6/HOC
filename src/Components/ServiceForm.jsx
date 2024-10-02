@@ -1,16 +1,16 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container'
 import { Button } from 'react-bootstrap';
-import { useState } from 'react';
+import WithTrack from './WithTrack';
 
-function ServiceForm() {
+function ServiceForm({ handleChange, handleSubmit}) {
 
   return (
     <Container>
         <div className='service'>
             
             <form action="" className='form' onSubmit={handleSubmit}>
-            <label for="name">Service Emp Name:</label>
+            <label >Service Emp Name:</label>
                 <input onChange={handleChange} name='name' type="text" />
                 <label>Emp Id :</label> 
                 <input onChange={handleChange} type="tel" id="empid" name="empid" pattern="[0-9]{3}" required/>
@@ -25,3 +25,5 @@ function ServiceForm() {
 }
 
 export default ServiceForm
+
+export const ServiceWithTrack = WithTrack(ServiceForm);

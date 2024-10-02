@@ -1,16 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Container from 'react-bootstrap/Container'
-import { Button } from 'react-bootstrap'
+import { Button } from 'react-bootstrap';
+import WithTrack from './WithTrack';
 
 
-function ContactForm() {
+function ContactForm({ handleChange, handleSubmit}) {
 
   return (
     <Container>
         <div className='service'>
             
             <form action="" className='form' onClick={handleSubmit}>
-            <label for="name">Customer Name :</label>
+            <label >Customer Name :</label>
                 <input onChange={handleChange} type="text" name='name' />
                 <label for="contact">Contact Number :</label>
                 <input onChange={handleChange} type="tel" id="contact" name="contact" pattern="[0-9]{10}" required/>
@@ -24,3 +25,5 @@ function ContactForm() {
 }
 
 export default ContactForm
+
+export const ContactWithTrack = WithTrack(ContactForm);
