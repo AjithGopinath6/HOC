@@ -4,25 +4,6 @@ import { Button } from 'react-bootstrap';
 import { useState } from 'react';
 
 function ServiceForm() {
-    const[formData,setFormData]=useState({
-        name:'',
-        empid:'',
-        message:''
-    });
-
-// function to handle changes.
-    const handleChange=(e)=>{
-        const{name, value} = e.target;
-        setFormData((prevData)=>({
-            ...prevData, [name]: value,
-        }));
-    }
-
-    // function to handle from submission.
-    const handleSubmit=(e)=>{
-        e.preventDefault();
-        console.log('formData:',formData);
-    }
 
   return (
     <Container>

@@ -4,23 +4,6 @@ import { Button } from 'react-bootstrap'
 
 
 function ContactForm() {
-    const[formData, setFormData] = useState({
-        name: '',
-        contact: '',
-        address: ''
-    })
-
-    const handleChange = (e)=>{
-        const {name, value} = e.target;
-        setFormData((prevData)=>
-            ({...prevData, [name]: value}
-        ))
-    }
-
-    const handleSubmit =(e)=>{
-        e,preventDefault();
-        console.log('formData:', formData);
-    }
 
   return (
     <Container>
